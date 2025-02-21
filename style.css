@@ -1,0 +1,238 @@
+/* Reset and basic styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+  }
+  
+
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.hero-image {
+    width: 300px;
+    max-width: 80%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 9px 9px 16px #a3b1c6, -9px -9px 16px #ffffff;
+}
+
+/* SVG Animation Styling */
+/* .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    overflow: hidden;
+  }
+  
+  .background-animation svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  } */
+.background-collage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* Keeps the collage behind the page content */
+    overflow: hidden;
+}
+
+.collage-logo {
+    position: absolute;
+    opacity: 0;
+    animation: fadeInOut 8s infinite;
+
+    img {
+        inline-size: 100%;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+
+
+/* Image stack container */
+.image-stack {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px; /* Adjust spacing as needed */
+    padding-inline: 30px;
+  }
+  
+  /* Big image with subtle reflection */
+  .big-image {
+    max-inline-size: 600px;
+    inline-size: 100%; /* Adjust size as needed */
+    border-radius: 12px;
+    display: block;
+    /* The reflection effect (Note: works in WebKit browsers) */
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent 50%, rgba(0, 0, 0, 0.1));
+  }
+  
+  /* Small image positioned over the big image */
+  .small-image {
+    position: absolute;
+    bottom: 0px; /* Adjust vertical positioning */
+    left: -1dvi;  /* Adjust horizontal positioning */
+    inline-size: 100%;
+    max-inline-size: clamp(90px, 18vw, 210px); /* Smaller image size */
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent 50%, rgba(0, 0, 0, 0.1));
+  }
+  
+
+.punchline {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.hero button,
+#installLink {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    background: #fff;
+    box-shadow: 7px 7px 14px #a3b1c6, -7px -7px 14px #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#installLink {
+    text-decoration: none;
+}
+
+.hero button:hover,
+#installLink:hover {
+    box-shadow: inset 7px 7px 14px #a3b1c6, inset -7px -7px 14px #ffffff;
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.how-it-works p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+/* Steps */
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.step {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    box-shadow: 9px 9px 16px #a3b1c6, -9px -9px 16px #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact p {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.contact a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #e0e5ec;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: inset 7px 7px 14px #a3b1c6, inset -7px -7px 14px #ffffff;
+}
